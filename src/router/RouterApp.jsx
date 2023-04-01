@@ -1,8 +1,8 @@
 import { Navigate, Route, Routes } from "react-router-dom"
-import { EpisodiosPage } from "../episodios/pages/EpisodiosPage"
-import { PersonajesPage } from "../personajes/pages/PersonajesPage"
-import { UbicacionesPage } from "../ubicaciones/pages/UbicacionesPage"
-import { Navbar } from "../ui/Navbar"
+import { EpisodiosPage } from "../episodios"
+import { UbicacionesPage } from "../ubicaciones"
+import { Navbar } from "../ui"
+import { PersonajesPage } from "../personajes"
 
 export const RouterApp=()=>{
 
@@ -14,8 +14,8 @@ export const RouterApp=()=>{
                 <Routes>
                     <Route path="/" element={<Navigate to="personajes/1"/>}/>
                     <Route path="personajes/:pages" element={<PersonajesPage/>}/>
-                    <Route path="episodios" element={<EpisodiosPage/>}/>
-                    <Route path="ubicaciones" element={<UbicacionesPage/>}/>
+                    <Route path="episodios/:pages" element={<EpisodiosPage/>}/>
+                    <Route path="ubicaciones/:pages" element={<UbicacionesPage/>}/>
 
                     
                     <Route path="/*" element={<Navigate to="personajes/1"/>}/>
