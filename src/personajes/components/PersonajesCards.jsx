@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 
 export const PersonajesCards=({id,name,status,species,image})=>{
     return(
@@ -18,9 +19,9 @@ export const PersonajesCards=({id,name,status,species,image})=>{
                                 <small className="text-muted">{species}</small>
                             </p>
 
-                            {/*<Link to={`/hero/${id}`}>
+                            <Link to={`/personaje/${id}`}>
                                 más..
-                            </Link>*/}
+                            </Link>
                         </div>
                     </div>
                 </div>

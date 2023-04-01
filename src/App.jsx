@@ -1,5 +1,5 @@
 import reactLogo from './assets/react.svg'
-import { RouterApp } from './router/RouterApp'
+import { RouterApp } from './router'
 
 function App() {
 
