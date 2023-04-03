@@ -6,6 +6,7 @@ export const EpisodiosList=()=>{
 
     const {episodios=[]} =useSelector(state=>state.episodios)
 
+    console.log(episodios)
     return (
 
         <div className="row rows-cols-1 row-cols-md-2 g-3">
