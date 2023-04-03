@@ -1,4 +1,4 @@
-import { PersonajesCards } from "../components"
+import { Button, PersonajesCards } from "../components"
 import { useEffect} from "react"
 import { useDispatch, useSelector } from "react-redux"
 import { getPersonajes } from "../slice/personajes"
@@ -16,18 +16,6 @@ export const PersonajesPage = ()=>{
     },[])
 
 
-    const onPrevios=()=>{
-        if(page===1)return;
-
-        dispatch( getPersonajes(page-1) )
-    }
-    
-    const onNext=()=>{
-        if(page===42)return;
-        
-        dispatch( getPersonajes(page+1) )
-        
-    }
     
     return(
 
@@ -40,16 +28,7 @@ export const PersonajesPage = ()=>{
                     />
                 ))}
             </div>
-
-            <div className="container-fluid h-100"> 
-                <div className="row w-100 align-items-center">
-                    <div className="col text-center">
-                        <button onClick={onPrevios}>previos</button>
-                        <button onClick={onNext}>next</button>
-                    </div>
-                </div>
-            </div>
-
+            <Button page={page} getPersonajes={getPersonajes} dispatch={dispatch}/>
         </>
         
     )

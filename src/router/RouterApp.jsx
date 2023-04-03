@@ -12,15 +12,15 @@ export const RouterApp=()=>{
 
             <div className="container bg-dark">
                 <Routes>
-                    <Route path="/" element={<Navigate to="personajes/1"/>}/>
-                    <Route path="personajes/:pages" element={<PersonajesPage/>}/>
+                    <Route path="/" element={<Navigate to="personajes"/>}/>
+                    <Route path="personajes" element={<PersonajesPage/>}/>
                     <Route path="personaje/:id" element={<PersonajePage/>}/>
 
                     <Route path="episodios/:pages" element={<EpisodiosPage/>}/>
                     <Route path="ubicaciones/:pages" element={<UbicacionesPage/>}/>
 
                     
-                    <Route path="/*" element={<Navigate to="personajes/1"/>}/>
+                    <Route path="/*" element={<Navigate to="personajes"/>}/>
 
                 </Routes>
             </div>

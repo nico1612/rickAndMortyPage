@@ -2,6 +2,7 @@ import axios from "axios"
 import { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
 import { UbicacionesCards } from "../componentes"
+import { Button } from "../../ui/Button"
 
 
 export const UbicacionesPage=()=>{
@@ -24,21 +25,6 @@ export const UbicacionesPage=()=>{
     },[reload])
 
 
-    const onPrevios=()=>{
-        if(page===1)return;
-
-        setPage(page-1)
-        setReload(true)
-    }
-
-    
-    const onNext=()=>{
-        if(page===42)return;
-
-        setPage(page+1)
-        setReload(true)
-        
-    }
 
     return(
 
@@ -51,14 +37,8 @@ export const UbicacionesPage=()=>{
                     />
                 ))}
             </div>
-            <div className="container-fluid h-100"> 
-                <div className="row w-100 align-items-center">
-                    <div className="col text-center">
-                        <button onClick={onPrevios}>previos</button>
-                        <button onClick={onNext}>next</button>
-                    </div>
-                </div>
-            </div>
+
+            <Button limit={42} page={page} setReload={setReload} setPage={setPage}/>
         </>
     )
 }
