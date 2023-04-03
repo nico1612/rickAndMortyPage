@@ -1,42 +1,31 @@
-import { useParams } from "react-router-dom"
 import { PersonajesCards } from "../components"
-import axios from "axios"
-import { useEffect, useState } from "react"
+import { useEffect} from "react"
+import { useDispatch, useSelector } from "react-redux"
+import { getPersonajes } from "../slice/personajes"
 
 
 export const PersonajesPage = ()=>{
-    
-    const {pages} = useParams()
 
-    
-    const [page,setPage]=useState(parseInt(pages,10))
-    const [personajes,setPersonajes]=useState([])
-    const [reload,setReload]=useState([false])
+    const {personajes=[],page} =useSelector(state=>state.personajes)
+
+    const dispatch=useDispatch()
 
     useEffect(()=>{
-        const cargarUsuarios=async()=>{
-            setPersonajes([])
-            const results=await axios(`https://rickandmortyapi.com/api/character/?page=${page}`)
-            setPersonajes(results.data.results)
-        }
-        cargarUsuarios()
-        setReload(false)
-    },[reload])
+
+        dispatch( getPersonajes() );    
+    },[])
 
 
     const onPrevios=()=>{
         if(page===1)return;
 
-        setPage(page-1)
-        setReload(true)
+        dispatch( getPersonajes(page-1) )
     }
-
     
     const onNext=()=>{
         if(page===42)return;
-
-        setPage(page+1)
-        setReload(true)
+        
+        dispatch( getPersonajes(page+1) )
         
     }
     

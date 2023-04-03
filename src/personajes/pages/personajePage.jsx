@@ -1,23 +1,26 @@
-import axios from "axios"
-import { useEffect, useState } from "react"
+import { useEffect } from "react"
+import { useDispatch, useSelector } from "react-redux"
 import { useParams } from "react-router-dom"
+import { PersonajeCard } from "../components"
+import { getPersonajes } from "../slice/personajes"
 
 
 export const PersonajePage=()=>{
 
+    const dispatch =useDispatch()
     const {id}= useParams()
-    const [personaje,setPersonaje]=useState([])
+    const {personajes=[],page} =useSelector(state=>state.personajes)
+    const ids=parseInt(id,10)
 
     useEffect(()=>{
-        const cargarUsuarios=async()=>{
-            const results=await axios(`https://rickandmortyapi.com/api/character/?id=${id}`)
-            setPersonaje(results.data.results)
-        }
-        cargarUsuarios()
+        dispatch(getPersonajes(page))
     },[])
+
+    const personaje=personajes[((ids-1))];
+    console.log(personaje)
     return (
         <>
-        <div className="row mt-5">
+            <div className="row mt-5">
                 <div className="col-4">
                     <img
                         src={`https://rickandmortyapi.com/api/character/avatar/1.jpeg`}
@@ -30,18 +33,11 @@ export const PersonajePage=()=>{
                     <h3>{personaje.name}</h3>
                     <ul className="list-group list-group-flush">
                         <li className="list-group-item"><b>status:</b> {personaje.status}</li>
-                        <li className="list-group-item"><b>Publisher:</b> {personaje.species}</li>
+                        <li className="list-group-item"><b>species:</b> {personaje.species}</li>
                         <li className="list-group-item"><b>type:</b> {personaje.type}</li>
                         <li className="list-group-item"><b>gender:</b> {personaje.gender}</li>
                         <li className="list-group-item"><b>origen:</b> {personaje.origin}</li>
                     </ul>
-
-                    {/*<button 
-                        className="btn btn-outline-primary"
-                        onClick={onReturn}
-                    >
-                        back
-    </button>*/}
                 </div>
             </div>
         </>
