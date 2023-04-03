@@ -48,8 +48,14 @@ export const EpisodiosPage=()=>{
                 ))}
                 
             </div>
-            <button onClick={onPrevios}>previos</button>
-            <button onClick={onNext}>next</button>
+            <div className="container-fluid h-100"> 
+                <div className="row w-100 align-items-center">
+                    <div className="col text-center">
+                        <button onClick={onPrevios}>previos</button>
+                        <button onClick={onNext}>next</button>
+                    </div>
+                </div>
+            </div>
         </>
     )
 }
