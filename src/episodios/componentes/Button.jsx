@@ -1,24 +1,26 @@
-import { useDispatch, useSelector } from "react-redux"
-import { getPersonajes } from "../../slice/personajes"
+import { useDispatch, useSelector } from "react-redux";
+import { getEpisodios } from "../../slice/episodios/thunks";
+
 
 
 export const Button =()=>{
 
     const dispatch=useDispatch()
-    const {page} =useSelector(state=>state.personajes)
+    const {page} =useSelector(state=>state.episodios)
 
     const onPrevios=()=>{
         if(page===1)return;
 
-        dispatch( getPersonajes(page-1) )
+        dispatch( getEpisodios(page-1) )
     }
     
     const onNext=()=>{
-        if(page===42)return;
+        if(page===3)return;
         
-        dispatch( getPersonajes(page+1) )
+        dispatch( getEpisodios(page+1) )
         
     }
+
     return(
         <div className="grid text-center">
             <div className="container-fluid h-100"> 

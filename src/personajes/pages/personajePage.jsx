@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react"
 import { useDispatch, useSelector } from "react-redux"
 import { useParams } from "react-router-dom"
-import { getPersonajes, setPersonajes } from "../slice/personajes"
 import axios from "axios"
+import { getPersonajes } from "../../slice/personajes"
 
 
 export const PersonajePage=()=>{

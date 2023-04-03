@@ -1,22 +1,24 @@
-import { useDispatch, useSelector } from "react-redux"
-import { getPersonajes } from "../../slice/personajes"
+import { useDispatch, useSelector } from "react-redux";
+import { getUbicaciones } from "../../slice/ubicaciones";
+
 
 
 export const Button =()=>{
 
     const dispatch=useDispatch()
-    const {page} =useSelector(state=>state.personajes)
+    const {pages} =useSelector(state=>state.ubicaciones)
 
+    console.log(pages)
     const onPrevios=()=>{
-        if(page===1)return;
+        if(pages===1)return;
 
-        dispatch( getPersonajes(page-1) )
+        dispatch( getUbicaciones(pages-1) )
     }
     
     const onNext=()=>{
-        if(page===42)return;
+        if(pages===42)return;
         
-        dispatch( getPersonajes(page+1) )
+        dispatch( getUbicaciones(pages+1) )
         
     }
     return(
