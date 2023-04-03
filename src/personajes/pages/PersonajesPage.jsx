@@ -12,7 +12,7 @@ export const PersonajesPage = ()=>{
 
     useEffect(()=>{
 
-        dispatch( getPersonajes() );    
+        dispatch( getPersonajes() );
     },[])
 
 
