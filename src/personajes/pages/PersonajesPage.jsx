@@ -4,7 +4,6 @@ import { useDispatch} from "react-redux"
 import { PersonajesList } from "../components/PersonajesList"
 import { getPersonajes } from "../../slice/personajes"
 
-
 export const PersonajesPage = ()=>{
 
     const dispatch=useDispatch()

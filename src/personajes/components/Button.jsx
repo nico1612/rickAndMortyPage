@@ -1,7 +1,6 @@
 import { useDispatch, useSelector } from "react-redux"
 import { getPersonajes } from "../../slice/personajes"
 
-
 export const Button =()=>{
 
     const dispatch=useDispatch()
@@ -19,7 +18,9 @@ export const Button =()=>{
         dispatch( getPersonajes(page+1) )
         
     }
+
     return(
+
         <div className="grid text-center">
             <div className="container-fluid h-100"> 
                 <div className="row w-100 align-items-center">
@@ -34,5 +35,7 @@ export const Button =()=>{
                 </div>
             </div>
         </div>
+
     )
+
 }

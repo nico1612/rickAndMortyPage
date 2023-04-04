@@ -1,7 +1,9 @@
 import { Link } from "react-router-dom"
 
 export const PersonajesCards=({id,name,status,species,image})=>{
+  
     return(
+
         <div className="col animate__animated animate__fadeIn">
             <div className="card">
                 <div className="row no-gutter">
@@ -27,5 +29,6 @@ export const PersonajesCards=({id,name,status,species,image})=>{
                 </div>
             </div>
         </div>
+
     )
 }

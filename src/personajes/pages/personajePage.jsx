@@ -26,6 +26,7 @@ export const PersonajePage=()=>{
     console.log(personaje)
     
     return (
+        
         <>
             <div className="row mt-5">
                 <div className="col-4">
@@ -48,5 +49,6 @@ export const PersonajePage=()=>{
                 </div>
             </div>
         </>
+
     )
 }

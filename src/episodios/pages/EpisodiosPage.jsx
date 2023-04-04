@@ -13,7 +13,6 @@ export const EpisodiosPage=()=>{
     },[])
 
     return(
-
         <>
             <div className="d-grid gap-3">
                 <div className="p-2">

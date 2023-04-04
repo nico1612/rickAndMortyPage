@@ -7,6 +7,7 @@ export const PersonajesList=()=>{
     const {personajes=[]} =useSelector(state=>state.personajes)
 
     return(
+
         <div className="row rows-cols-1 row-cols-md-2 g-2">
             {personajes.map(personaje=>(
                 <PersonajesCards
@@ -15,5 +16,6 @@ export const PersonajesList=()=>{
                 />
             ))}
         </div>
+        
     )
 }
