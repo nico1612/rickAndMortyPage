@@ -6,7 +6,6 @@ export const Button =()=>{
     const dispatch=useDispatch()
     const {pages} =useSelector(state=>state.ubicaciones)
 
-    console.log(pages)
     const onPrevios=()=>{
         if(pages===1)return;
 
