@@ -13,4 +13,5 @@ export const EpisodiosList=()=>{
             ))}
         </div>
     )
+    
 }

@@ -31,4 +31,5 @@ export const PersonajesCards=({id,name,status,species,image})=>{
         </div>
 
     )
+
 }

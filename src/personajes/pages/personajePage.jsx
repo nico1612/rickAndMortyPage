@@ -29,6 +29,7 @@ export const PersonajePage=()=>{
     return (
 
         <>
+
             <div className="row mt-5">
                 <div className="col-4">
                     <img
@@ -49,6 +50,7 @@ export const PersonajePage=()=>{
                     </ul>
                 </div>
             </div>
+
         </>
 
     )

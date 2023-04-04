@@ -1,8 +1,6 @@
 import { useDispatch, useSelector } from "react-redux";
 import { getUbicaciones } from "../../slice/ubicaciones";
 
-
-
 export const Button =()=>{
 
     const dispatch=useDispatch()
@@ -21,6 +19,7 @@ export const Button =()=>{
         dispatch( getUbicaciones(pages+1) )
         
     }
+
     return(
         <div className="grid text-center">
             <div className="container-fluid h-100"> 
