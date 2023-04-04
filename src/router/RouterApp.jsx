@@ -17,8 +17,8 @@ export const RouterApp=()=>{
                     <Route path="personajes" element={<PersonajesPage/>}/>
                     <Route path="personaje/:id" element={<PersonajePage/>}/>
 
-                    <Route path="episodios/:pages" element={<EpisodiosPage/>}/>
-                    <Route path="ubicaciones/:pages" element={<UbicacionesPage/>}/>
+                    <Route path="episodios" element={<EpisodiosPage/>}/>
+                    <Route path="ubicaciones" element={<UbicacionesPage/>}/>
 
                     
                     <Route path="/*" element={<Navigate to="personajes"/>}/>
