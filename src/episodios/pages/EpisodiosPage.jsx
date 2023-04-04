@@ -19,7 +19,7 @@ export const EpisodiosPage=()=>{
                 <div className="p-2">
                     <EpisodiosList/>
                 </div>
-                <div classClass="p-2">
+                <div className="p-2">
                     <Button/>
                 </div>
             </div>

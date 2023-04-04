@@ -3,6 +3,7 @@ import { EpisodiosPage } from "../episodios"
 import { UbicacionesPage } from "../ubicaciones"
 import { Navbar } from "../ui"
 import { PersonajePage, PersonajesPage } from "../personajes"
+import { Footer } from "../ui/footer"
 
 export const RouterApp=()=>{
 
@@ -24,6 +25,8 @@ export const RouterApp=()=>{
 
                 </Routes>
             </div>
+            
+            <Footer/>
         </>
     )
 }
