@@ -21,7 +21,7 @@ export const Navbar=()=>{
                     <li className="nav-item">
                         <NavLink
                             className={(isActive)=>`nav-item nav-link ${isActive ? 'active':''}`}
-                            to="/personajes/1"
+                            to="/personajes"
                         >
                             personajes
                         </NavLink>
@@ -29,7 +29,7 @@ export const Navbar=()=>{
                     <li className="nav-item">
                         <NavLink 
                             className={(isActive)=> `nav-item nav-link ${isActive?'active':''}`} 
-                            to="/episodios/1"
+                            to="/episodios"
                         >
                             episodios
                         </NavLink>
@@ -37,7 +37,7 @@ export const Navbar=()=>{
                     <li className="nav-item">
                         <NavLink 
                             className={(isActive)=> `nav-item nav-link ${isActive?'active':''}`} 
-                            to="/ubicaciones/1"
+                            to="/ubicaciones"
                         >
                             ubicaciones
                         </NavLink>

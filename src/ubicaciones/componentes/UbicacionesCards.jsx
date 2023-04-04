@@ -18,9 +18,6 @@ export const UbicacionesCards=({name,type,dimension})=>{
                                 <small className="text-muted">{dimension}</small>
                             </p>
 
-                            {/*<Link to={`/hero/${id}`}>
-                                más..
-                            </Link>*/}
                         </div>
                     </div>
                 </div>
