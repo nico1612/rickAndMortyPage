@@ -1,7 +1,7 @@
 import { useEffect } from "react"
 import { Button, EpisodiosList } from "../componentes"
-import { useDispatch, useSelector } from "react-redux"
-import { getEpisodios } from "../../slice/episodios/thunks"
+import { useDispatch } from "react-redux"
+import { getEpisodios } from "../../slice"
 
 export const EpisodiosPage=()=>{
 

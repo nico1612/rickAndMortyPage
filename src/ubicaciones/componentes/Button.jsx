@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from "react-redux";
 import { getUbicaciones } from "../../slice/ubicaciones";
-import { Button2 } from "../../ui/Button2";
+import { Button2 } from "../../ui";
 
 export const Button =()=>{
 
@@ -11,13 +11,14 @@ export const Button =()=>{
         if(pages===1)return;
 
         dispatch( getUbicaciones(pages-1) )
+        console.log(pages)
+
     }
     
     const onNext=()=>{
         if(pages===42)return;
         
-        dispatch( getUbicaciones(pages+1) )
-        
+        dispatch( getUbicaciones(pages+1) )        
     }
 
     return(

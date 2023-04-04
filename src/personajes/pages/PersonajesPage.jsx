@@ -1,8 +1,7 @@
-import { Button} from "../components"
+import { Button, PersonajesList} from "../components"
 import { useEffect} from "react"
 import { useDispatch} from "react-redux"
-import { PersonajesList } from "../components/PersonajesList"
-import { getPersonajes } from "../../slice/personajes"
+import { getPersonajes } from "../../slice"
 
 export const PersonajesPage = ()=>{
 

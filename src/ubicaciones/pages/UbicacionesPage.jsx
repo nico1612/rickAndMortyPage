@@ -1,8 +1,7 @@
 import { useEffect,} from "react"
 import { useDispatch } from "react-redux"
-import { UbicacionesList } from "../componentes/UbicacionesList"
-import { getUbicaciones } from "../../slice/ubicaciones"
-import { Button } from "../componentes/Button"
+import { getUbicaciones } from "../../slice"
+import { Button, UbicacionesList } from "../componentes"
 
 
 export const UbicacionesPage=()=>{
@@ -23,7 +22,6 @@ export const UbicacionesPage=()=>{
                 <div className="p-2">
                     <Button/>
                 </div>
-                <div className="p-2">Elemento de cuadrícula 3</div>
             </div> 
         </>
     )

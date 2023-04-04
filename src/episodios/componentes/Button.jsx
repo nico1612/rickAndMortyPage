@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from "react-redux";
 import { getEpisodios } from "../../slice/episodios/thunks";
-import { Button2 } from "../../ui/Button2";
+import { Button2 } from "../../ui";
 
 export const Button =()=>{
 
