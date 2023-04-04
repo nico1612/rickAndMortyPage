@@ -1,7 +1,7 @@
 import { setUbicaciones, startLoadingUbicaciones } from "./ubicacionesSlice";
 
 
-export const getUbicaciones = ( page = 0 ) => {
+export const getUbicaciones = ( page = 1) => {
     return async( dispatch, getState ) => {
         dispatch( startLoadingUbicaciones() );
 

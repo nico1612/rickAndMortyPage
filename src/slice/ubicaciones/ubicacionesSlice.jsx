@@ -13,7 +13,7 @@ export const ubicacionesSlice = createSlice({
         },
         setUbicaciones: ( state, action ) => {
             state.isLoading = false;
-            state.page = action.payload.page;
+            state.pages = action.payload.page;
             state.ubicaciones = action.payload.ubicaciones;
         }
     }
