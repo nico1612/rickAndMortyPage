@@ -4,8 +4,8 @@ export const PersonajesCards=({id,name,status,species,image})=>{
   
     return(
 
-        <div className="col animate__animated animate__fadeIn">
-            <div className="card">
+        <div className="col animate__animated animate__fadeIn ">
+            <div className="card bg-warning">
                 <div className="row no-gutter">
                     <div className="col-4">
                         <img src={image} className="card-img" alt={name}/>

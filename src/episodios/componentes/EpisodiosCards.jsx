@@ -4,7 +4,7 @@ export const EpisodiosCards=({id,name,air_date,episode,created})=>{
     return(
 
         <div className="col animate__animated animate__fadeIn">
-            <div className="card">
+            <div className="card bg-warning">
                 <div className="row no-gutter">
                     
                     <div>

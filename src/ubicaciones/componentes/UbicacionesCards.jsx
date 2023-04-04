@@ -3,7 +3,7 @@ export const UbicacionesCards=({name,type,dimension})=>{
 
     return(
         <div className="col animate__animated animate__fadeIn">
-            <div className="card">
+            <div className="card bg-warning">
                 <div className="row no-gutter">
                     <div>
                         <div className="card-body">
