@@ -1,5 +1,3 @@
-import axios from "axios"
-
 
 export const EpisodiosCards=({id,name,air_date,episode,created})=>{
     return(

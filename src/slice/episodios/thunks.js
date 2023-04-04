@@ -10,7 +10,7 @@ export const getEpisodios = ( page = 0 ) => {
          const data = await resp.json();
         //const { data } = await pokemonApi.get(`/pokemon?limit=10&offset=${ page * 10 }`);
         //console.log(data.results)
-        dispatch( setEpisodios({ personajes: data.results, page: page  }) );
+        dispatch( setEpisodios({ episodios: data.results, page: page  }) );
     }
 
 }

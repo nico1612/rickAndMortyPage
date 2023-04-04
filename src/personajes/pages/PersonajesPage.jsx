@@ -16,8 +16,14 @@ export const PersonajesPage = ()=>{
     return(
 
         <>
-            <PersonajesList/>
-            <Button />
+            <div className="d-grid gap-3">
+                <div className="p-2">
+                    <PersonajesList/>
+                </div>
+                <div className="p-2 ">
+                    <Button/>
+                </div>
+            </div>
         </>
         
     )
