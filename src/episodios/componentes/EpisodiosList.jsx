@@ -1,5 +1,5 @@
 import { useSelector } from "react-redux"
-import { EpisodiosCards } from "./EpisodiosCards"
+import { EpisodiosCards } from "./"
 
 export const EpisodiosList=()=>{
 

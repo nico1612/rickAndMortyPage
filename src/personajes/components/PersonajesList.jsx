@@ -1,5 +1,5 @@
 import { useSelector } from "react-redux"
-import { PersonajesCards } from "./PersonajesCards"
+import { PersonajesCards } from "./"
 
 
 export const PersonajesList=()=>{
